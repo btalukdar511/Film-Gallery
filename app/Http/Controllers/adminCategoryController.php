@@ -61,7 +61,8 @@ class adminCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cat = Category::findorfail($id);
+        return view('admin.category.edit', compact('cat'));
     }
 
     /**
@@ -73,7 +74,9 @@ class adminCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cat = Category::findorfail($id);
+        $cat->update($request->all());
+        return redirect(route('dashboard'));
     }
 
     /**
@@ -84,6 +87,8 @@ class adminCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cat = Category::findorfail($id);
+        $cat->delete();
+        return redirect(route('dashboard'));
     }
 }

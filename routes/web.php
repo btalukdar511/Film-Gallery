@@ -25,4 +25,9 @@ Route::get('/admin', function (){
 
 Route::resource('admin/category', 'adminCategoryController');
 
+Route::get('admin/film/add', 'adminFilmController@add')->name('film.add');
+
+Route::post('admin/film/multiadd', 'adminFilmController@multiadd')->name('film.multiadd');
+
 Route::resource('admin/film', 'adminFilmController');
+

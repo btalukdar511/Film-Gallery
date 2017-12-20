@@ -24,14 +24,23 @@
                 $cats = App\Category::all();
             @endphp
 
-            <div class="list-group" style="margin: 0px 40px 0px 40px">
+            <div class="list-group admin-dash-cat" style="margin: 0 40px">
                 @foreach($cats as $cat)
-                    <a href="{{route('category.show', $cat->id)}}" class="list-group-item">
-                        {{$cat->title}}
+                    <div class="list-group-item">
+                        <a href="{{route('category.show', $cat->id)}}">
+                            {{$cat->title}}
+                        </a>
+
+                        <span class="pull-right">
+                        <span class="glyphicon glyphicon-edit"></span> <a href="{{route('category.edit', $cat->id)}}">Edit</a>
+
                         <span class="badge">
                             {{count($cat->films)}}
                         </span>
-                    </a>
+                        </span>
+                    </div>
+
+
                 @endforeach
             </div>
         </div>

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Poster extends Model
 {
@@ -25,6 +26,21 @@ class Poster extends Model
     }
 
     public function src(){
-        return url('/') . $this->uploads . $this->path;
+        return asset('storage/images/'.urlencode($this->path));
+//        return url('/').Storage::url('images/'.$this->path);
+    }
+
+    public function local(){
+        return public_path() . $this->uploads . $this->path;
+    }
+
+
+    public function delete()
+    {
+        if(file_exists($this->local())){
+            unlink($this->local());
+        }
+
+        return parent::delete();
     }
 }

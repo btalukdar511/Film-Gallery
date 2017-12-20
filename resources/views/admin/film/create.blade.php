@@ -7,6 +7,8 @@
     </a>
 @endsection
 
+
+
 @section('content')
     <div style="width: 50%; margin : auto">
 
