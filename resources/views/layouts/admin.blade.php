@@ -11,8 +11,7 @@
 
     <!-- Styles -->
     @yield('styles')
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/libs.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -55,10 +54,7 @@
 <!-- Scripts -->
 @yield('scripts')
 
-<script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
-
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/libs.js') }}"></script>
 
 </body>
 </html>

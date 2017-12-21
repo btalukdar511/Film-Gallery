@@ -1,0 +1,147 @@
+
+.poster {
+  width: 300px;
+  height: 400px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.poster + label {
+  color: #6bbdff;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 400;
+  display: block;
+  width: 300px;
+  height: 150px;
+  padding: 60px 70px;
+  border: 1px solid #ccd0d2;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+.poster:focus + label, .poster + label:hover {
+  background-color: #f7fafc;
+  border-color: #98cbe8;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(152, 203, 232, .6)
+}
+
+.label-text {
+  text-align: center;
+  display: block;
+  width: 160px;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.admin-cat-content, .admin-film-content {
+  margin: auto;
+  width: 90%;
+}
+
+.admin-cat-film {
+  width: 19%;
+  float: left;
+  margin-bottom: 30px;
+  margin-right: 1%;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.admin-cat-film img {
+  height: 300px;
+  margin: 5% auto;
+}
+
+.admin-cat-film span {
+  display: table;
+  margin: 0 auto;
+}
+
+.admin-film-poster img {
+  height: 500px;
+  margin: auto;
+}
+
+.admin-film-poster-upload {
+  width: 300px;
+  height: 500px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.admin-film-poster-upload + label {
+  color: #6bbdff;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 400;
+  display: block;
+  width: 300px;
+  height: 500px;
+  border: 1px solid #ccd0d2;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+.admin-film-poster-label-text {
+  visibility: hidden;
+}
+
+.admin-film-poster-upload + label:hover .admin-film-poster-label-text {
+  visibility: visible;
+  position: absolute;
+  left: 145px;
+  top: 350px;
+  background: red;
+  text-align: center;
+  border-radius: 30px 30px 30px 30px;
+  color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.admin-dash-film div {
+  width: 24%;
+  float: left;
+  margin-bottom: 30px;
+  margin-right: 1%;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.admin-dash-film img {
+  height: 250px;
+  margin: 5% auto;
+}
+
+.admin-dash-film span {
+  display: table;
+  margin: 0 auto;
+}
+
+/*.admin-dash-cat div{*/
+/*position: relative;*/
+/*}*/
+
+.admin-dash-cat .edit{
+  display: block;
+}
+
+.multi-add-form label{
+  margin-left: 10px;
+}
+
+.multi-add-form input{
+  margin-right: 10px;
+}
